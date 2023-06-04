@@ -1,0 +1,7 @@
+{
+  "name": "hm10-ionic-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
