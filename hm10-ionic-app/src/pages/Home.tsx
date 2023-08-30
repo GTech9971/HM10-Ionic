@@ -7,7 +7,9 @@ import { DeviceData } from '../models/DeviceData';
 const Home: React.FC = () => {
   /** HM-10のMAC ADDRESS */
   //const MAC_ADDRESS: string = 'DB457B9E-7D59-4EE2-42FA-B8EDC1DABF52';
-  const MAC_ADDRESS: string = 'F52D143C-4F0F-0A28-4F9B-EA2B4F7F337A';
+  //const MAC_ADDRESS: string = 'F52D143C-4F0F-0A28-4F9B-EA2B4F7F337A';
+  //ipad
+  const MAC_ADDRESS: string = '7449DE88-5C2B-1841-91C6-E16E89BDAA55';
   const SERVICE_UUID: string = 'FFE0';
   const CHAR_UUID: string = 'FFE1';
 
@@ -69,12 +71,13 @@ const Home: React.FC = () => {
 
   const forward_back = useCallback(async (): Promise<void> => {
     await forward();
-    await waitSecond(3000);
+    await waitSecond(1000);
     await stop();
-    await waitSecond(3000);
+    await waitSecond(1000 * 2);
     await back();
-    await waitSecond(3000);
+    await waitSecond(1000);
     await stop();
+    await waitSecond(1000 * 2);
   }, [forward, stop, waitSecond, back]);
 
   return (
